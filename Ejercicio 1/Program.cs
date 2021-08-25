@@ -12,33 +12,34 @@ namespace Ejercicio_1
         */
         static void Main(string[] args)
         {
-            double nota1, nota2, nota3, promedio=0;
-            string seguir;
+            double notaUno, notaDos, notaTres, promedioNotas=0;
+            string opcionSeguir;
 
             do
             {
+                
                 Console.WriteLine("\nIngrese la nota 1 (RANGO: 0 a 5): ");
                 try
                 {
-                    nota1 = double.Parse(Console.ReadLine());
+                    notaUno = double.Parse(Console.ReadLine());
                 }
                 catch (FormatException e)
                 {
                     Console.WriteLine("ERROR!! La nota NO es correcta! Su valor será 1");
-                    nota1 = 1;
+                    notaUno = 1;
                 }
 
-                while (nota1 < 0 || nota1 > 5)
+                while (notaUno < 0 || notaUno > 5)
                 {
                     Console.WriteLine("Escriba un nota dentro del rango establecido (RANGO: 0 a 5): ");
                     try
                     {
-                        nota1 = double.Parse(Console.ReadLine());
+                        notaUno = double.Parse(Console.ReadLine());
                     }
                     catch (FormatException e)
                     {
                         Console.WriteLine("ERROR!! La nota NO es correcta! Su valor será 1");
-                        nota1 = 1;
+                        notaUno = 1;
                     }
                 }
 
@@ -46,25 +47,25 @@ namespace Ejercicio_1
                 Console.WriteLine("Ingrese la nota 2 (RANGO: 0 a 5): ");
                 try
                 {
-                    nota2 = double.Parse(Console.ReadLine());
+                    notaDos = double.Parse(Console.ReadLine());
                 }
                 catch (FormatException e)
                 {
                     Console.WriteLine("ERROR!! La nota NO es correcta! Su valor será 1");
-                    nota2 = 1;
+                    notaDos = 1;
                 }
 
-                while (nota2 < 0 || nota2 > 5)
+                while (notaDos < 0 || notaDos > 5)
                 {
                     Console.WriteLine("Escriba un nota dentro del rango establecido (RANGO: 0 a 5): ");
                     try
                     {
-                        nota2 = double.Parse(Console.ReadLine());
+                        notaDos = double.Parse(Console.ReadLine());
                     }
                     catch (FormatException e)
                     {
                         Console.WriteLine("ERROR!! La nota NO es correcta! Su valor será 1");
-                        nota2 = 1;
+                        notaDos = 1;
                     }
                 }
 
@@ -72,33 +73,33 @@ namespace Ejercicio_1
                 Console.WriteLine("Ingrese la nota 3 (RANGO: 0 a 5): ");
                 try
                 {
-                    nota3 = double.Parse(Console.ReadLine());
+                    notaTres = double.Parse(Console.ReadLine());
                 }
                 catch (FormatException e)
                 {
                     Console.WriteLine("ERROR!! La nota NO es correcta! Su valor será 1");
-                    nota3 = 1;
+                    notaTres = 1;
                 }
 
-                while (nota3 < 0 || nota3 > 5)
+                while (notaTres < 0 || notaTres > 5)
                 {
                     Console.WriteLine("Escriba un nota dentro del rango establecido (RANGO: 0 a 5): ");
                     try
                     {
-                        nota3 = double.Parse(Console.ReadLine());
+                        notaTres = double.Parse(Console.ReadLine());
                     }
                     catch (FormatException e)
                     {
                         Console.WriteLine("ERROR!! La nota NO es correcta! Su valor será 1");
-                        nota3 = 1;
+                        notaTres = 1;
                     }
                 }
 
 
-                promedio = (nota1 + nota2 + nota3) / 3;
-                Console.Write("El promedio de la asignatura es: {0}", promedio);
+                promedioNotas = (notaUno + notaDos + notaTres) / 3;
+                Console.Write("El promedio de la asignatura es: {0}", promedioNotas);
 
-                if (promedio >= 3)
+                if (promedioNotas >= 3)
                 {
                     Console.Write("\nEl estudiante GANÓ la asignatura");
                 }
@@ -108,10 +109,9 @@ namespace Ejercicio_1
                 }
 
                 Console.Write("\n¿Desea volver a evaluar? S/N: ");
-                seguir = Console.ReadLine();
-            } while (seguir.ToUpper().Equals("S"));
-
-            
+                opcionSeguir = Console.ReadLine();
+            } while (opcionSeguir.ToUpper().Equals("S"));
+ 
         }
     }
 }
